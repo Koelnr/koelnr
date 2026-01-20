@@ -1,3 +1,5 @@
+import { Car, Zap, Sparkles } from "lucide-react";
+
 export const allowedCities = ["Ludhiana", "Delhi", "New Delhi"];
 
 export const siteConfig = {
@@ -17,19 +19,19 @@ export const siteConfig = {
     subtitle: "Premium service, unmatched convenience",
     items: [
       {
-        icon: "🚗",
+        icon: Car,
         title: "Doorstep Service",
         description:
           "No need to drive anywhere. We come to your location at your scheduled time.",
       },
       {
-        icon: "⚡",
+        icon: Zap,
         title: "Quick & Efficient",
         description:
           "15-minute quick washes with professional equipment and eco-friendly products.",
       },
       {
-        icon: "✨",
+        icon: Sparkles,
         title: "Satisfaction Guaranteed",
         description:
           "Not satisfied? Get a free re-wash within 48 hours. No questions asked.",
@@ -224,17 +226,17 @@ export const siteConfig = {
             "Koelnr is launching soon with premium car wash services at your doorstep. Be the first to know when we launch.",
           features: [
             {
-              icon: "🚗",
+              icon: Car,
               title: "Doorstep Service",
               description: "Premium car wash at your location",
             },
             {
-              icon: "⚡",
+              icon: Zap,
               title: "Quick Service",
               description: "15-minute express washes",
             },
             {
-              icon: "💎",
+              icon: Sparkles,
               title: "Premium Quality",
               description: "Professional care for your car",
             },
@@ -256,17 +258,17 @@ export const siteConfig = {
             "Koelnr is launching soon with premium car wash services at your doorstep. Be the first to know when we launch.",
           features: [
             {
-              icon: "🚗",
+              icon: Car,
               title: "Doorstep Service",
               description: "Premium car wash at your location",
             },
             {
-              icon: "⚡",
+              icon: Zap,
               title: "Quick Service",
               description: "15-minute express washes",
             },
             {
-              icon: "💎",
+              icon: Sparkles,
               title: "Premium Quality",
               description: "Professional care for your car",
             },

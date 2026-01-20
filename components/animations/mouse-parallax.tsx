@@ -62,7 +62,7 @@ export function MouseParallax({
         }}
       >
         {/* Overlay for better text readability */}
-        <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
+        <div className={`absolute inset-0 bg-background/75`} />
       </div>
 
       {/* Content */}
