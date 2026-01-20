@@ -20,6 +20,7 @@ export default async function ComingSoonPage() {
   );
 
   const saveEmail = async (formData: FormData) => {
+    "use server";
     const email = formData.get("email") as string;
     await savePreLaunchEmail(email, decodeURIComponent(city as string));
   };
