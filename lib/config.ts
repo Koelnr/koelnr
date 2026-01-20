@@ -197,4 +197,34 @@ export const siteConfig = {
     ],
     copyright: "2026 Koelnr. All rights reserved.",
   },
+  comingSoon: {
+    badge: "Coming Soon",
+    title: "Something Exciting is Coming",
+    subtitle: "We're working hard to bring you the best car wash experience. Stay tuned!",
+    description: "Koelnr is launching soon with premium car wash services at your doorstep. Be the first to know when we launch.",
+    features: [
+      {
+        icon: "🚗",
+        title: "Doorstep Service",
+        description: "Premium car wash at your location"
+      },
+      {
+        icon: "⚡",
+        title: "Quick Service",
+        description: "15-minute express washes"
+      },
+      {
+        icon: "💎",
+        title: "Premium Quality",
+        description: "Professional care for your car"
+      }
+    ],
+    notifyButton: "Notify Me",
+    emailPlaceholder: "Enter your email",
+    socialLinks: {
+      twitter: "#",
+      instagram: "#",
+      facebook: "#"
+    }
+  },
 };
