@@ -12,6 +12,8 @@ export default async function ComingSoonPage() {
   const country = h.get("x-vercel-ip-country");
   const city = h.get("x-vercel-ip-city");
 
+  const config = siteConfig.comingSoon(city as string);
+
   console.info(`[Coming Soon] Visitor from ${city}, ${country}`);
 
   return (
@@ -21,7 +23,7 @@ export default async function ComingSoonPage() {
           <div className="text-center space-y-8">
             {/* Badge */}
             <FadeIn delay={0}>
-              <Badge>{siteConfig.comingSoon.badge}</Badge>
+              <Badge>{config.badge}</Badge>
             </FadeIn>
 
             {/* Logo/Brand */}
@@ -33,22 +35,20 @@ export default async function ComingSoonPage() {
 
             {/* Title */}
             <FadeIn delay={0.2}>
-              <h2 className="text-3xl md:text-5xl font-bold">
-                {siteConfig.comingSoon.title}
-              </h2>
+              <h2 className="text-3xl md:text-5xl font-bold">{config.title}</h2>
             </FadeIn>
 
             {/* Subtitle */}
             <FadeIn delay={0.3} y={30}>
               <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
-                {siteConfig.comingSoon.subtitle}
+                {config.subtitle}
               </p>
             </FadeIn>
 
             {/* Description */}
             <FadeIn delay={0.4}>
               <p className="text-lg text-muted-foreground max-w-xl mx-auto">
-                {siteConfig.comingSoon.description}
+                {config.description}
               </p>
             </FadeIn>
 
@@ -59,13 +59,11 @@ export default async function ComingSoonPage() {
                   <Input
                     autoFocus
                     type="email"
-                    placeholder={siteConfig.comingSoon.emailPlaceholder}
+                    placeholder={config.emailPlaceholder}
                     required
                     className="flex-1"
                   />
-                  <Button type="submit">
-                    {siteConfig.comingSoon.notifyButton}
-                  </Button>
+                  <Button type="submit">{config.notifyButton}</Button>
                 </form>
               </div>
             </FadeIn>
@@ -75,7 +73,7 @@ export default async function ComingSoonPage() {
               <div className="pt-12">
                 <ScrollReveal stagger={0.15} childSelector=".reveal-item">
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    {siteConfig.comingSoon.features.map((feature, index) => (
+                    {config.features.map((feature, index) => (
                       <Card
                         key={index}
                         className="reveal-item border-2 hover:shadow-lg transition-shadow bg-card/50 backdrop-blur"
@@ -102,10 +100,7 @@ export default async function ComingSoonPage() {
             <FadeIn delay={0.7}>
               <div className="pt-8 flex items-center justify-center gap-6">
                 <Button asChild size="icon" variant="ghost">
-                  <Link
-                    href={siteConfig.comingSoon.socialLinks.twitter}
-                    aria-label="Twitter"
-                  >
+                  <Link href={config.socialLinks.twitter} aria-label="Twitter">
                     <svg
                       className="size-5"
                       fill="currentColor"
@@ -117,7 +112,7 @@ export default async function ComingSoonPage() {
                 </Button>
                 <Button asChild size="icon" variant="ghost">
                   <Link
-                    href={siteConfig.comingSoon.socialLinks.instagram}
+                    href={config.socialLinks.instagram}
                     aria-label="Instagram"
                   >
                     <svg
@@ -157,7 +152,7 @@ export default async function ComingSoonPage() {
                 </Button>
                 <Button asChild size="icon" variant="ghost">
                   <Link
-                    href={siteConfig.comingSoon.socialLinks.facebook}
+                    href={config.socialLinks.facebook}
                     aria-label="Facebook"
                   >
                     <svg
