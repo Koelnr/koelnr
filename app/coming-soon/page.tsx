@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { FadeIn, ScrollReveal } from "@/components/animations";
 import { siteConfig } from "@/lib/config";
+import { savePreLaunchEmail } from "../actions/pre-launch";
 
 export default async function ComingSoonPage() {
   const h = await headers();
@@ -17,6 +18,11 @@ export default async function ComingSoonPage() {
   console.info(
     `[Coming Soon] Visitor from ${decodeURIComponent(city as string)}, ${country}`,
   );
+
+  const saveEmail = async (formData: FormData) => {
+    const email = formData.get("email") as string;
+    await savePreLaunchEmail(email, decodeURIComponent(city as string));
+  };
 
   return (
     <main className="min-h-screen bg-background flex items-center justify-center p-4">
@@ -57,8 +63,12 @@ export default async function ComingSoonPage() {
             {/* Email Form */}
             <FadeIn delay={0.5} scale={0.95}>
               <div className="max-w-md mx-auto pt-4">
-                <form className="flex flex-col sm:flex-row gap-4">
+                <form
+                  action={saveEmail}
+                  className="flex flex-col sm:flex-row gap-4"
+                >
                   <Input
+                    name="email"
                     autoFocus
                     type="email"
                     placeholder={config.emailPlaceholder}
