@@ -3,19 +3,19 @@ import { Car, Zap, Sparkles } from "lucide-react";
 export const allowedCities = ["Ludhiana", "Delhi", "New Delhi"];
 
 export const siteConfig = {
-  name: "Koelnr",
+  name: "Köelnr",
   tagline: "Premium Car Care",
   description:
     "Premium car wash services at your doorstep. Subscribe for unlimited quick washes and exclusive benefits.",
   hero: {
-    title: "Welcome to Koelnr",
+    title: "Welcome to Köelnr",
     subtitle:
       "Premium car wash services at your doorstep. Subscribe for unlimited quick washes and exclusive benefits.",
     primaryCTA: "Start Your Subscription",
     secondaryCTA: "Book Quick Wash",
   },
   features: {
-    title: "Why Choose Koelnr?",
+    title: "Why Choose Köelnr?",
     subtitle: "Premium service, unmatched convenience",
     items: [
       {
@@ -188,7 +188,7 @@ export const siteConfig = {
   cta: {
     title: "Ready to Get Started?",
     description:
-      "Join thousands of satisfied customers who trust Koelnr for their car care needs",
+      "Join thousands of satisfied customers who trust Köelnr for their car care needs",
     primaryButton: "Start Your Subscription",
     secondaryButton: "Contact Us",
   },
@@ -213,7 +213,7 @@ export const siteConfig = {
         links: ["Privacy Policy", "Terms of Service", "Refund Policy"],
       },
     ],
-    copyright: "2026 Koelnr. All rights reserved.",
+    copyright: "2026 Köelnr. All rights reserved.",
   },
   comingSoon: (city: string) => {
     return allowedCities.includes(city)
@@ -223,7 +223,7 @@ export const siteConfig = {
           subtitle:
             "We're working hard to bring you the best car wash experience. Stay tuned!",
           description:
-            "Koelnr is launching soon with premium car wash services at your doorstep. Be the first to know when we launch.",
+            "Köelnr is launching soon with premium car wash services at your doorstep. Be the first to know when we launch.",
           features: [
             {
               icon: Car,
@@ -255,7 +255,7 @@ export const siteConfig = {
           subtitle:
             "We're working hard to bring you the best car wash experience. Stay tuned!",
           description:
-            "Koelnr is launching soon with premium car wash services at your doorstep. Be the first to know when we launch.",
+            "Köelnr is launching soon with premium car wash services at your doorstep. Be the first to know when we launch.",
           features: [
             {
               icon: Car,
